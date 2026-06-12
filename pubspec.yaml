@@ -1,0 +1,14 @@
+name: bozhou_city_guide
+version: 1.0.0+1
+publish_to: 'none'
+description: 安徽省亳州市三语手账风城市导览 Flutter 示例
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
