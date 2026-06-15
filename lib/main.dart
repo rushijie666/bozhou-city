@@ -76,6 +76,7 @@ class SpotItem {
     required this.category,
     required this.icon,
     required this.color,
+    required this.imageUrl,
     required this.text,
     required this.detail,
     required this.time,
@@ -87,6 +88,7 @@ class SpotItem {
   final SpotCategory category;
   final String icon;
   final Color color;
+  final String imageUrl;
   final T text;
   final T detail;
   final T time;
@@ -101,6 +103,7 @@ class FoodItem {
     required this.text,
     required this.tag,
     required this.color,
+    required this.imageUrl,
   });
 
   final String id;
@@ -109,6 +112,7 @@ class FoodItem {
   final T text;
   final T tag;
   final Color color;
+  final String imageUrl;
 }
 
 class RouteStop {
@@ -162,6 +166,7 @@ const List<SpotItem> spots = [
     category: SpotCategory.heritage,
     icon: '戏',
     color: AppColors.red,
+    imageUrl: 'assets/images/bozhou/huaxilou.jpg',
     text: T(
       '会馆、戏楼、砖雕和木雕集中在一处，是亳州老城最有辨识度的封面。',
       '회관, 극장, 벽돌 조각과 목조 장식이 모인 보저우 구도심의 대표 장면입니다.',
@@ -181,6 +186,7 @@ const List<SpotItem> spots = [
     category: SpotCategory.caowei,
     icon: '曹',
     color: AppColors.blue,
+    imageUrl: 'assets/images/bozhou/ancient_tunnels.jpg',
     text: T(
       '地下军事通道遗存，适合做“曹魏故里”主题路线的核心节点。',
       '지하 군사 통로 유적으로, “조위 고장” 테마 코스의 핵심 지점입니다.',
@@ -200,6 +206,7 @@ const List<SpotItem> spots = [
     category: SpotCategory.medicine,
     icon: '药',
     color: AppColors.green,
+    imageUrl: 'assets/images/bozhou/hua_tuo_temple.jpg',
     text: T(
       '纪念华佗的中医药文化节点，可以和五禽戏、养生亳州一起展示。',
       '화타를 기리는 중의약 문화 지점으로 오금희와 양생 보저우 테마에 어울립니다.',
@@ -219,6 +226,7 @@ const List<SpotItem> spots = [
     category: SpotCategory.heritage,
     icon: '馆',
     color: AppColors.gold,
+    imageUrl: 'assets/images/bozhou/bozhou_museum.jpg',
     text: T(
       '适合用一站了解古谯、商汤、曹魏、中医药和地方文物脉络。',
       '고초, 상탕, 조위, 중의약과 지역 문물의 흐름을 한 번에 이해하기 좋은 장소입니다.',
@@ -238,6 +246,7 @@ const List<SpotItem> spots = [
     category: SpotCategory.wine,
     icon: '酒',
     color: Color(0xFF8F5A2C),
+    imageUrl: 'assets/images/bozhou/gujing_museum.jpeg',
     text: T(
       '围绕古井贡酒与传统酿造文化展开，适合做“酒香慢游”路线。',
       '고정공주와 전통 양조 문화를 중심으로 한 “술 향기 산책” 코스에 어울립니다.',
@@ -257,6 +266,7 @@ const List<SpotItem> spots = [
     category: SpotCategory.street,
     icon: '街',
     color: AppColors.purple,
+    imageUrl: 'assets/images/bozhou/nanjing_lane_bank.jpg',
     text: T(
       '老街、会馆、夜游和小吃聚在一起，是手账地图里最有烟火气的一段。',
       '옛거리, 회관, 야간 산책과 간식이 모여 있어 손장 지도에서 가장 생활감 있는 구간입니다.',
@@ -280,6 +290,7 @@ const List<FoodItem> foods = [
     text: T('外皮焦香、内馅扎实，是亳州烟火小吃里很适合首推的一项。', '겉은 바삭하고 속은 든든한 보저우 대표 길거리 음식입니다.', 'A hearty local snack with a crisp outside and rich beef filling.'),
     tag: T('必吃', '필수', 'Must try'),
     color: AppColors.red,
+    imageUrl: 'https://www.zhccr.com/File/GWCwenzlb/20250403/611492ecef264e8bbdfc0865395ef51b_thumb.jpg',
   ),
   FoodItem(
     id: 'dry-noodle',
@@ -288,6 +299,7 @@ const List<FoodItem> foods = [
     text: T('干拌面香味突出，适合放在县域特色美食入口。', '비벼 먹는 향이 진한 면으로 현지 특색을 보여줍니다.', 'A fragrant dry noodle dish that highlights county-level food culture.'),
     tag: T('面食', '면요리', 'Noodles'),
     color: AppColors.blue,
+    imageUrl: 'https://s4.cdn.jiaonizuocai.com/zhishi/201409/23212800437.jpg/NjQweDA.webp',
   ),
   FoodItem(
     id: 'smoked-beef',
@@ -296,6 +308,7 @@ const List<FoodItem> foods = [
     text: T('咸香耐嚼，适合做伴手礼和老字号素材。', '짭짤하고 쫄깃해 선물이나 전통 맛집 소재로 좋습니다.', 'Savory and chewy, suitable for souvenir and old-brand food cards.'),
     tag: T('伴手礼', '선물', 'Souvenir'),
     color: AppColors.green,
+    imageUrl: 'https://p4.itc.cn/images01/20220227/cbc6f40ae3ef44378c1fc3ace0219380.jpeg',
   ),
   FoodItem(
     id: 'herbal-soup',
@@ -304,6 +317,7 @@ const List<FoodItem> foods = [
     text: T('把“中华药都”的养生气质放进菜单板块。', '“중화 약도”의 양생 이미지를 메뉴에 담을 수 있습니다.', 'A wellness-style food card that connects with Bozhou’s medicine identity.'),
     tag: T('养生', '양생', 'Wellness'),
     color: AppColors.gold,
+    imageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Chinese_herbal_soup.jpg',
   ),
   FoodItem(
     id: 'sazi',
@@ -312,6 +326,7 @@ const List<FoodItem> foods = [
     text: T('酥脆小吃，适合在美食页补充“轻食/零嘴”感觉。', '바삭한 간식으로 음식 페이지에 가벼운 먹거리 느낌을 더합니다.', 'A crispy snack that adds a light-bite option to the food page.'),
     tag: T('小吃', '간식', 'Snack'),
     color: AppColors.purple,
+    imageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Sangza_at_a_Uyghur_restaurant.jpg',
   ),
   FoodItem(
     id: 'herbal-tea',
@@ -320,6 +335,7 @@ const List<FoodItem> foods = [
     text: T('和药都主题呼应，适合做休息点或文创饮品。', '약도 테마와 어울리며 휴식 포인트나 문화 음료로 좋습니다.', 'A calm drink card that echoes the medicine-and-wellness theme.'),
     tag: T('文创', '문화상품', 'Creative'),
     color: Color(0xFF9A7044),
+    imageUrl: 'https://commons.wikimedia.org/wiki/Special:FilePath/Chrysanthemum_tea.jpg',
   ),
 ];
 
@@ -524,6 +540,16 @@ class _BozhouGuidePageState extends State<BozhouGuidePage> {
                   ),
                 ),
                 const SizedBox(height: 16),
+                SizedBox(
+                  height: 148,
+                  child: RemotePhoto(
+                    url: item.imageUrl,
+                    fallbackLabel: item.icon,
+                    color: item.color,
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                ),
+                const SizedBox(height: 14),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -663,7 +689,7 @@ class TopBar extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        RoundButton(child: const Icon(Icons.chevron_left_rounded, size: 28), onTap: () {}),
+        RoundButton(child: const Icon(Icons.chevron_left_rounded, size: 28), onTap: () => Navigator.of(context).maybePop()),
         Row(
           children: [
             MiniLanguageDot(active: lang == AppLanguage.zh, label: '中'),
@@ -1105,7 +1131,7 @@ class FoodSection extends StatelessWidget {
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
         itemCount: foods.length,
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 12, mainAxisSpacing: 12, childAspectRatio: .78),
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, crossAxisSpacing: 12, mainAxisSpacing: 12, childAspectRatio: .68),
         itemBuilder: (context, index) {
           final item = foods[index];
           return MenuCard(lang: lang, item: item, saved: savedFoods.contains(item.id), onTap: () => onSaveTap(item.id));
@@ -1320,15 +1346,36 @@ class Postcard extends StatelessWidget {
           padding: const EdgeInsets.all(12),
           child: Row(
             children: [
-              Container(
-                width: 92,
-                height: 108,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(begin: Alignment.topLeft, end: Alignment.bottomRight, colors: [item.color, Color.lerp(item.color, AppColors.ink, .35)!]),
-                  borderRadius: BorderRadius.circular(21),
+              SizedBox(
+                width: 98,
+                height: 112,
+                child: Stack(
+                  children: [
+                    Positioned.fill(
+                      child: RemotePhoto(
+                        url: item.imageUrl,
+                        fallbackLabel: item.icon,
+                        color: item.color,
+                        borderRadius: BorderRadius.circular(21),
+                      ),
+                    ),
+                    Positioned(
+                      left: 8,
+                      top: 8,
+                      child: Container(
+                        width: 34,
+                        height: 34,
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                          color: item.color,
+                          borderRadius: BorderRadius.circular(13),
+                          boxShadow: const [BoxShadow(color: Color(0x33000000), blurRadius: 12, offset: Offset(0, 6))],
+                        ),
+                        child: Text(item.icon, style: const TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.w900)),
+                      ),
+                    ),
+                  ],
                 ),
-                child: Text(item.icon, style: const TextStyle(color: Colors.white, fontSize: 34, fontWeight: FontWeight.w900)),
               ),
               const SizedBox(width: 13),
               Expanded(
@@ -1376,49 +1423,155 @@ class MenuCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(13),
+      padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(color: soft(Colors.white, .70), borderRadius: BorderRadius.circular(24), border: Border.all(color: soft(Colors.white, .82)), boxShadow: const [BoxShadow(color: Color(0x143D3020), blurRadius: 24, offset: Offset(0, 12))]),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Stack(
             children: [
-              Container(
-                width: 54,
-                height: 54,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(color: item.color, borderRadius: BorderRadius.circular(18)),
-                child: Text(item.icon, style: const TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.w900)),
+              SizedBox(
+                height: 82,
+                width: double.infinity,
+                child: RemotePhoto(
+                  url: item.imageUrl,
+                  fallbackLabel: item.icon,
+                  color: item.color,
+                  borderRadius: BorderRadius.circular(18),
+                ),
               ),
-              const Spacer(),
-              InkWell(
-                onTap: onTap,
-                borderRadius: BorderRadius.circular(999),
+              Positioned(
+                left: 7,
+                top: 7,
                 child: Container(
-                  width: 34,
-                  height: 34,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(color: saved ? AppColors.red : Colors.white, borderRadius: BorderRadius.circular(999), border: Border.all(color: saved ? AppColors.red : AppColors.line)),
-                  child: Text('♥', style: TextStyle(color: saved ? Colors.white : const Color(0xFF8B7B66), fontSize: 16, fontWeight: FontWeight.w900)),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+                  decoration: BoxDecoration(color: soft(Colors.white, .86), borderRadius: BorderRadius.circular(999)),
+                  child: Text(item.icon, style: TextStyle(color: item.color, fontSize: 13, fontWeight: FontWeight.w900)),
+                ),
+              ),
+              Positioned(
+                right: 7,
+                top: 7,
+                child: InkWell(
+                  onTap: onTap,
+                  borderRadius: BorderRadius.circular(999),
+                  child: Container(
+                    width: 34,
+                    height: 34,
+                    alignment: Alignment.center,
+                    decoration: BoxDecoration(color: saved ? AppColors.red : soft(Colors.white, .92), borderRadius: BorderRadius.circular(999), border: Border.all(color: saved ? AppColors.red : AppColors.line)),
+                    child: Text('♥', style: TextStyle(color: saved ? Colors.white : const Color(0xFF8B7B66), fontSize: 16, fontWeight: FontWeight.w900)),
+                  ),
                 ),
               ),
             ],
           ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 4),
-                decoration: BoxDecoration(color: soft(item.color, .12), borderRadius: BorderRadius.circular(999)),
-                child: Text(item.tag.of(lang), style: TextStyle(color: item.color, fontSize: 10, fontWeight: FontWeight.w900)),
+          const SizedBox(height: 10),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 4),
+            decoration: BoxDecoration(color: soft(item.color, .12), borderRadius: BorderRadius.circular(999)),
+            child: Text(item.tag.of(lang), style: TextStyle(color: item.color, fontSize: 10, fontWeight: FontWeight.w900)),
+          ),
+          const SizedBox(height: 6),
+          Text(item.title.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(color: AppColors.ink, fontSize: 16, fontWeight: FontWeight.w900)),
+          const SizedBox(height: 5),
+          Expanded(
+            child: Text(item.text.of(lang), maxLines: 4, overflow: TextOverflow.ellipsis, style: const TextStyle(color: AppColors.muted, fontSize: 12, height: 1.48, fontWeight: FontWeight.w700)),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+
+class RemotePhoto extends StatelessWidget {
+  const RemotePhoto({
+    super.key,
+    required this.url,
+    required this.fallbackLabel,
+    required this.color,
+    required this.borderRadius,
+  });
+
+  final String url;
+  final String fallbackLabel;
+  final Color color;
+  final BorderRadius borderRadius;
+
+  @override
+  Widget build(BuildContext context) {
+    return ClipRRect(
+      borderRadius: borderRadius,
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [color, Color.lerp(color, AppColors.ink, .35)!],
               ),
-              const SizedBox(height: 6),
-              Text(item.title.of(lang), maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(color: AppColors.ink, fontSize: 16, fontWeight: FontWeight.w900)),
-              const SizedBox(height: 5),
-              Text(item.text.of(lang), maxLines: 3, overflow: TextOverflow.ellipsis, style: const TextStyle(color: AppColors.muted, fontSize: 12, height: 1.52, fontWeight: FontWeight.w700)),
-            ],
+            ),
+            child: Center(
+              child: Text(
+                fallbackLabel,
+                style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w900),
+              ),
+            ),
+          ),
+          if (url.startsWith('assets/'))
+            Image.asset(
+              url,
+              fit: BoxFit.cover,
+              filterQuality: FilterQuality.medium,
+              errorBuilder: (context, error, stackTrace) {
+                return Center(
+                  child: Text(
+                    fallbackLabel,
+                    style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w900),
+                  ),
+                );
+              },
+            )
+          else
+            Image.network(
+              url,
+              fit: BoxFit.cover,
+              filterQuality: FilterQuality.medium,
+              loadingBuilder: (context, child, loadingProgress) {
+                if (loadingProgress == null) return child;
+                return Center(
+                  child: SizedBox(
+                    width: 22,
+                    height: 22,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2.4,
+                      color: soft(Colors.white, .86),
+                    ),
+                  ),
+                );
+              },
+              errorBuilder: (context, error, stackTrace) {
+                return Center(
+                  child: Text(
+                    fallbackLabel,
+                    style: const TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.w900),
+                  ),
+                );
+              },
+            ),
+          Positioned.fill(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [Colors.transparent, soft(AppColors.ink, .18)],
+                ),
+              ),
+            ),
           ),
         ],
       ),
